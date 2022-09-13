@@ -1,2 +1,2 @@
-# My-SQL-Practice-Work
+# My-First-SQL-Practice-Work
 Different SQL tasks
