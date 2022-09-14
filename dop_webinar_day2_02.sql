@@ -1,5 +1,5 @@
 select *
 from payment
-where to_char(data_doc ,'yyyy') = 2019
+where data_doc >= to_date ('01.01.2019', 'dd.mm.yyyy')
 order by amountuah desc
 fetch first 10 rows only;
