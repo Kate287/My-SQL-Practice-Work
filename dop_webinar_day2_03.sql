@@ -1,11 +1,12 @@
-select data_doc as "Дата транзакції",
-       debacc as "Дебетовий рахунок",
-       amountuah as "Сума, грн",
-       txt as "Призначення платежу"
+select data_doc as "Date of transaction",
+       debacc as "Dibit account",
+       amountuah as "Sum, UAN",
+       txt as "Purpose of payment"
 from payment
-where txt like '%газ%' 
+where txt like '%gas%' 
       and currency = 980 
-      and to_char(data_doc ,'yyyy') between 2002 and 2015
+      and data_doc > to_date('2002', 'yyyy')
+      and data_doc < to_date('2015', 'yyyy')
       and status = '+'
 order by amountuah 
 fetch first 3 rows only;
