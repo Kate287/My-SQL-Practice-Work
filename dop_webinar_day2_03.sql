@@ -1,5 +1,5 @@
 select data_doc as "Date of transaction",
-       debacc as "Dibit account",
+       debacc as "Debit account",
        amountuah as "Sum, UAN",
        txt as "Purpose of payment"
 from payment
